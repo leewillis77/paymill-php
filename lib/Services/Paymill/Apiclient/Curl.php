@@ -73,8 +73,8 @@ class Services_Paymill_Apiclient_Curl implements Services_Paymill_Apiclient_Inte
                     $errorMessage = $response['body']['error'];
                 }
                 $responseCode = '';
-                if (isset($response['body']['response_code'])) {
-                    $responseCode = $response['body']['response_code'];
+                if (isset($response['body']['data']['response_code'])) {
+                    $responseCode = $response['body']['data']['response_code'];
                 }
 
                 return array("data" => array(
